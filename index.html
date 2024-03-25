@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#FED000;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            
+            
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: scroll;
+            padding: 4px;
+            border: 6px solid #ccc;
+            border-radius: 5px;
+            background-color:#FED000;
+
+        }
+      .user-message {
+            background-color:#223BC9;
+            padding: 6px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color:#fff;
+            box-shadow: 20px 10px 60px black;  
+            
+
+        }
+        .bot-message {
+            background-color:#fff;
+            padding: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            
+box-shadow: 20px 10px 60px black;        }
+    </style>
+</head>
+<body>
+<h1>Ai Bot Created by Zaid</h1>
+
+    <div class="container">
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">Hello!
+            This Bot provide you information from the internet only right one word of the topic to get information </div>
+        </div><br>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div class="f">This Ai boat is created Zaid <br>
+    it Will hi you any information of a topic<bt>
+     By only right one word of the topic to get information This Bot provide you information from the internet</div>
+    
+
+    <script>
+        function sendMessage() {
+            var userInput = document.getElementById("user-input").value;
+            displayUserMessage(userInput);
+            getBotResponse(userInput);
+        }
+
+        function displayUserMessage(message) {
+            var chatBox = document.getElementById("chat-box");
+            var userMessageDiv = document.createElement("div");
+            userMessageDiv.className = "user-message";
+            userMessageDiv.textContent = message;
+            chatBox.appendChild(userMessageDiv);
+            document.getElementById("user-input").value = "";
+        }
+
+        function displayBotMessage(message) {
+            var chatBox = document.getElementById("chat-box");
+            var botMessageDiv = document.createElement("div");
+            botMessageDiv.className = "bot-message";
+            botMessageDiv.textContent = message;
+            chatBox.appendChild(botMessageDiv);
+        }
+
+        function getBotResponse(query) {
+            fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${query}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.extract) {
+                    displayBotMessage(data.extract);
+                } else {
+                    displayBotMessage("I'm sorry, I couldn't find any information on that topic.");
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                displayBotMessage("Oops! Something went wrong. Please try again later.");
+            });
+        }
+    </script>
+</body>
+</html>
+<style>h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose your preferred font family */
+    font-size:20px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    color: #333; /* Choose your preferred text color */
+    text-align: center; /* Align text to the center */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+    margin: 20px;
+    background-color:#1E90FF;
+    box-shadow: 5px 5px  5px black;
+    border-radius: 25px;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.f{
+height:100px;
+
+background-color:#1E90FF;
+text-align: center;
+padding: 10px;
+color:white;
+
+}
+
+  </style>
