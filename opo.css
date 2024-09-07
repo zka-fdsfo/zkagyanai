@@ -1,0 +1,462 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#000000;
+    background-image:url(oiop.png) ;
+    background-size: cover;
+}
+.lr{
+    color: white;
+    font-size: 8px;
+    text-align: center;
+}
+.frt{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    max-width: 1520px;
+    /* margin: 20px auto; */
+    /* background: rgb(255 255 255 / 7%); */
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin: 20px; */
+    box-shadow: 5px 5px 60px black;
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 5px black;
+}
+.chat-box {
+    height: 476px;
+    overflow-y: scroll;
+    padding: 13px;
+    /* border: 3px solid #09585c; */
+    border-radius: 5px;
+    /* background: rgb(255 255 255 / 0%); */
+    /* backdrop-filter: blur(6px); */
+    width: 100%;
+}
+.uy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    margin-right: 10px;
+    margin-left: 10px; /* Space between avatar and message */
+}
+
+.bot-logo {
+    width: 50px; /* Set the size of the bot's logo */
+    height: 50px;
+    border-radius: 50%; /* Ensure the logo is circular */
+    object-fit: cover; /* Ensure the image fits within the circle */
+    display: none;
+}
+
+.bot-message {
+    background-color: #333; /* Background for the message */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding inside the message bubble */
+    border-radius: 20px; /* Rounded message bubble */
+    max-width: 70%; /* Control width of the message bubble */
+    word-wrap: break-word; /* Wrap long text */
+    position: relative;
+}
+
+.bot-message:before {
+    content: "";
+    position: absolute;
+    left: -10px; /* Adjust the position to connect the arrow to the avatar */
+    top: 15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent; /* Message arrow styling */
+    display: none;
+}
+
+.user-message {
+    padding: 13px;
+    margin: 25px;
+    margin-left: 150px;
+    margin-right: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 10px;
+    color: white;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #005dff;
+    background: linear-gradient(rgb(255 255 255 / 13%), rgb(0 100 255)), linear-gradient(144deg, rgb(0 0 0) 0%, rgb(221 201 201 / 20%) 100%);
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #C6FF00;
+    margin-top: 50px;
+    background-image: url(ghjlkm.png);
+    background-size: cover;
+}
+.uy {
+    display: none;  /* Initially hidden */
+}
+
+.logo {
+      /* Initially hidden */
+}
+/* .uy is the container for both logo and message/loading dots */
+
+    .uy {
+        display: flex;
+        align-items: flex-start;
+        /* margin-top: 10px; */
+    }
+
+
+/* Align the bot logo */
+.logo {
+    margin-right: 10px;
+}
+
+.bot-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Bot message styling */
+.bot-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 60%;
+}
+
+/* Loading dots styling */
+.loading-dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: blink 1.4s infinite both;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.uy
+{
+    
+    display: flex;
+    flex-direction: column;
+}
+    .bot-message {
+    background-color: #232323b8;
+    padding: 19px;
+    color: white;
+    width: 241px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    box-shadow: 20px 10px 60px black;
+    margin: 10px;
+    background: linear-gradient(rgb(255 255 255 / 13%), rgb(33 94 189 / 20%)), linear-gradient(144deg, rgb(0 0 0 / 78%) 0%, rgb(0 0 0 / 20%) 100%);
+    /* backdrop-filter: blur(15px); */
+    font-size: 15px;
+    
+}
+.loading-message {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin: 10px 0;
+    text-align: left;
+}
+.top-message {
+    background-color: #232323;
+    
+    color: white;
+    width: 241px;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    margin-bottom: 10px;
+    box-shadow: 20px 10px 60px black;
+    margin: 10px;
+    /* background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(144deg, rgb(255 255 255 / 78%) 0%, rgb(255 255 255 / 20%) 100%); */
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 25px;
+    /* border-bottom-right-radius: 7px; */
+    border-top-right-radius: 21px;
+}
+.top-message p {
+    padding: 10px;
+    margin: 4px;
+    font-family: system-ui;
+    font-size: 12px;
+}
+.top-message img {
+    height: 174px;
+    width: 240px;
+    border-top-left-radius: 25px;
+    /* border-bottom-right-radius: 7px; */
+    border-top-right-radius: 21px;
+}
+button{
+color: white;
+background-color:#084a62;
+border-radius: 5px;
+height: 27px;
+background: rgb(67 80 255 / 20%);
+
+}
+#user-input{
+border-radius: 5px;
+height: 23px;
+width: 235px;
+margin-left: 10px;
+
+}
+.en {
+    display: flex;
+    justify-content: space-around;
+    /* margin: 28px; */
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    /* font-weight: bold; */
+    padding-top: 10px;
+    background-color: #000000;
+    align-items: center;
+    /* box-shadow: inset 0 0 0px 5px rgba(0, 0, 0, 0.8), inset 0 0 15px 5px rgba(255, 255, 255, 0.2); */
+    padding-bottom: 10px;
+    border-bottom: 0.2px #ffffff29 solid;
+}
+
+.green {
+    height: 7px;
+    width: 7px;
+    background-color: rgb(0, 255, 115);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.en i{
+    color: rgb(248, 248, 248);
+    
+}
+video {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    max-width: 50px;
+    /* margin: 20px auto; */
+    padding: 1px;
+}
+
+
+  .f{
+height:110px;
+background-color:black;
+text-align: center;
+color:white;
+padding-top:10px ;
+width: 100%; 
+}
+.chat-container {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 50px;
+    width: fit-content;
+  }
+  
+  #user-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    background-color: #121212;
+    color: #fff;
+    outline: none;
+    border-radius: 25px;
+  }
+  
+  #user-input::placeholder {
+    color: #b3b3b3;
+  }
+  
+  #send-btn {
+    background-color: #C6FF00;
+    border: none;
+    border-radius: 25%;
+    padding: 6px;
+    display: flex;
+    margin-left: 14px;
+    cursor: pointer;
+    height: 49px;
+    width: 49px;
+    padding-left: 13px;
+    padding-bottom: 9px;
+}
+  
+#send-btn svg {
+    width: 57px;
+    height: 34px;
+    fill: #fbfbfb;
+    transform: rotate(316deg);
+    text-align: center;
+}
+
+.topographic-texture {
+    width: 100%;
+    height: 100vh;
+    background:
+      radial-gradient(circle, transparent, transparent 10%, rgba(255, 255, 255, 0.1) 11%, transparent 12%) 0 0 / 100px 100px,
+      radial-gradient(circle, transparent, transparent 8%, rgba(255, 255, 255, 0.2) 9%, transparent 10%) 50px 50px / 100px 100px,
+      radial-gradient(circle, transparent, transparent 12%, rgba(255, 255, 255, 0.1) 13%, transparent 14%) 25px 25px / 100px 100px,
+      radial-gradient(circle, transparent, transparent 6%, rgba(255, 255, 255, 0.3) 7%, transparent 8%) 75px 75px / 100px 100px;
+    background-size: 100px 100px, 100px 100px, 100px 100px, 100px 100px;
+    animation: moveTexture1 10s linear infinite, moveTexture2 15s linear infinite, moveTexture3 20s linear infinite, moveTexture4 25s linear infinite;
+  }
+
+  @keyframes moveTexture1 {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  @keyframes moveTexture2 {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 100% 0%; }
+  }
+
+  @keyframes moveTexture3 {
+    0% { background-position: 100% 0%; }
+    100% { background-position: 0% 100%; }
+  }
+
+  @keyframes moveTexture4 {
+    0% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  .robot {
+          width: 150px;
+          height: 250px;
+          background-color: #e0f7f8;
+          border-radius: 15px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .robot::before {
+          content: '';
+          width: 40px;
+          height: 40px;
+          background-color: #e0f7f8;
+          border-radius: 50%;
+          position: absolute;
+          top: -30px;
+          left: calc(50% - 20px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .robot::after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          background-color: #e0f7f8;
+          border-radius: 50%;
+          position: absolute;
+          top: -50px;
+          left: calc(50% - 5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .robot .screen {
+          width: 100px;
+          height: 50px;
+          background-color: #263238;
+          border-radius: 10px;
+          position: relative;
+      }
+
+      .robot .screen::before {
+          content: '💬';
+          font-size: 24px;
+          color: #00c3b8;
+          position: absolute;
+          top: 10px;
+          left: 22px;
+      }
+
+      .robot .eyes {
+          display: flex;
+          justify-content: space-between;
+          width: 50px;
+          position: absolute;
+          top: 10px;
+      }
+
+      .robot .eyes .eye {
+          width: 12px;
+          height: 12px;
+          background-color: #00c3b8;
+          border-radius: 50%;
+      }
+
+      .robot .arms {
+          display: flex;
+          justify-content: space-between;
+          width: 120%;
+          position: absolute;
+          top: 100px;
+      }
+
+      .robot .arms .arm {
+          width: 20px;
+          height: 70px;
+          background-color: #263238;
+          border-radius: 10px;
+      }
+
+      .robot .legs {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          position: absolute;
+          bottom: 10px;
+      }
+
+      .robot .legs .leg {
+          width: 30px;
+          height: 70px;
+          background-color: #263238;
+          border-radius: 10px;
+      }
