@@ -4,276 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Bot</title>
+    <link rel="stylesheet" href="opo.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color:#e4d200;
-            background-image:url(oiop.png) ;
-            background-size: cover;
-        }
-        .container {
-            max-width:1520px;
-            margin: 20px auto;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            box-shadow:5px 5px 60px black;
-            backdrop-filter: blur(10px);
-            box-shadow: 5px 5px  5px black;
-            
-        }
-        .chat-box {
-            height: 400px;
-            overflow-y: scroll;
-            padding: 4px;
-            border: 3px solid #09585c;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(6px);
-
-        }
-      .user-message {
-           
-            padding: 13px;
-            margin:25px;
-            margin-left:102px ;
-            margin-right:5px ;
-            border-top-left-radius:7px ;
-            border-top-right-radius: 7px;
-            border-bottom-left-radius: 7px;
-            margin-bottom: 10px;
-            color:white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color:#005dff;
-        }
-        .bot-message {
-            /*background-color:#fff;*/
-            padding:25px;
-            border-top-left-radius:7px ;
+        /* Add some styling for the Wikipedia image */
+        .wiki-image {
+            max-width: 200px;  /* Ensure the image doesn't exceed a specific width */
+            max-height: 150px; /* Restrict the image height to maintain layout */
+            width: auto;       /* Maintain aspect ratio */
+            height: auto;      /* Maintain aspect ratio */
+            display: block;    /* Display as block element to ensure it's on a new line */
+            margin: 10px 0;    /* Add some margin for better spacing */
             border-bottom-right-radius: 7px;
-            border-top-right-radius: 7px;
-            margin-bottom: 10px;
-            box-shadow: 20px 10px 60px black;
-            margin: 10px;
-            background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(144deg, rgb(255 255 255 / 78%) 0%, rgb(255 255 255 / 20%) 100%);
-            backdrop-filter: blur(15px);        
+            border-bottom-left-radius: 7px;
         }
-button{
-    color: white;
-    background-color:#084a62;
-    border-radius: 5px;
-    height: 27px;
-    background: rgb(67 80 255 / 20%);
 
-}
-#user-input{
-    border-radius: 5px;
-    height: 23px;
-    width: 235px;
-
-}
-.en{
-    display: flex;
-    justify-content: center;
-    margin:28px;
-    font-family: Arial, sans-serif;
-    font-size:40px;
-    font-weight: bold;
-    padding-top: 10px;
-}
-video{
-    display: flex;
-    justify-content: center;
-    height:152px;
-     max-width:1520px;
-     margin: 20px auto;
-    padding: 1px;
-}
-
+       
     </style>
-
-<div class="en">ZKaGyan.AI Bot</div>
-<video autoplay muted loop src="dfefsd.mp4">
-</video>
 </head>
 <body>
-<h1>Ai Bot Created by Zaid</h1>
+    <div class="topographic-texture">
+        <div class="en">
+            <i class="fa-solid fa-chevron-left"></i>
+            <div class="lr">
+                <h1>Mobo bot</h1>
+                <div class="frt">
+                    <div class="green"></div>
+                    Online
+                </div>
+            </div>
+            <video src="juy.mp4" autoplay muted loop></video>
+        </div>
+    
 
     <div class="container">
         <div class="chat-box" id="chat-box">
-            <div class="bot-message">Hello!
-            This Bot provide you information from the internet write ( only  one word ) of the topic to get information  </div>
+            <div class="top-message">
+                <img src="YHKLTK.png" alt="">
+                <p>Hello! This Bot provides you with information from the internet. Write (only one word) of the topic to get information.</p>
+            
         </div><br>
-        <input type="text" id="user-input" placeholder="Type your message here...">
-        <button onclick="sendMessage()">Send</button>
+        <div class="uy">
+            <div class="logo" d>
+                
+            </div>
+            <div class="bot-message" style="padding: 1px;
+            margin-bottom: 0px;
+            margin-top: -54px;
+            font-size: 11px;
+            margin-left: 71px;">
+                <p style="margin-left: 10px;">Please type a topic you'd like to know more about!</p>
+            </div>
+        </div>
+        
+       </div>
+       </div>
+        
+        <div class="chat-container">
+            <input type="text" id="user-input" placeholder="Start a new chat..." />
+            <button onclick="sendMessage()" id="send-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
     </div>
-    <div class="f">
-    <div class="mp">
-     <br>
-     <br>
-     <div class="ins">
-    <a class="nt" href="https://www.instagram.com/zkagyan/">
-    <img src="jjy.png">
-    </a>
-    <br>
-     <a class="lm" href="https://www.instagram.com/zkagyan/">Instagram</a>
-     </div>
-     <div class="ins">
-    <a class="nt" href="https://www.facebook.com/zkagyan/">
-    <img src="ghbgf.png">
-    </a>
-    <br>
-     <a class="lm" href="https://www.facebook.com/zkagyan//">facebook</a>
-     </div>
-     <br>
-     <div class="ins">
-    <a class="nt" href="https://www.youtube.com/@zkagyan">
-      <img src="khjjh.png">
-    <br>
-    </a>
-     <a  class="lm" href="https://www.youtube.com/@zkagyan">Youtube</a>
-     </div>
-     <br>
-     <div class="ins">
-    <a class="nt" href="https://www.linkedin.com/in/mullick-zaid-khan-151077260/">
-      <img src="dfd.png">
-    </a>
-    <br>
-     <a  class="lm" href="https://www.linkedin.com/in/mullick-zaid-khan-151077260/">linkedin</a>
-     </div>
-     <br>
-     </div>
-    </div>
-     <div class="text1">This Ai boat is created by Zaid it Will give you any information of a topic
-     By  typing ( only one word ) of the topic to get information This Bot provide you information from the internet
-    </div>
-    <div class="bou"></div>    
-     
+</div>
+<script>
+    async function sendMessage() {
+    var userInput = document.getElementById("user-input").value;
+    displayUserMessage(userInput);
+    displayLoadingMessage(); // Show loading message
+    await getBotResponse(userInput); // Wait for bot response
+}
 
-    <script>
-        function sendMessage() {
-            var userInput = document.getElementById("user-input").value;
-            displayUserMessage(userInput);
-            getBotResponse(userInput);
-        }
+function displayUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userMessageDiv = document.createElement("div");
+    userMessageDiv.className = "user-message";
+    userMessageDiv.textContent = message;
+    chatBox.appendChild(userMessageDiv);
+    document.getElementById("user-input").value = "";
+}
 
-        function displayUserMessage(message) {
-            var chatBox = document.getElementById("chat-box");
-            var userMessageDiv = document.createElement("div");
-            userMessageDiv.className = "user-message";
-            userMessageDiv.textContent = message;
-            chatBox.appendChild(userMessageDiv);
-            document.getElementById("user-input").value = "";
-        }
+function displayLoadingMessage() {
+    var chatBox = document.getElementById("chat-box");
+    var loadingMessageDiv = document.createElement("div");
+    loadingMessageDiv.className = "loading-message";
+    loadingMessageDiv.textContent = "    Loading...";
+    loadingMessageDiv.id = "loading-message";
+    chatBox.appendChild(loadingMessageDiv);
+}
 
-        function displayBotMessage(message) {
-            var chatBox = document.getElementById("chat-box");
-            var botMessageDiv = document.createElement("div");
-            botMessageDiv.className = "bot-message";
-            botMessageDiv.textContent = message;
-            chatBox.appendChild(botMessageDiv);
-        }
+function removeLoadingMessage() {
+    var loadingMessage = document.getElementById("loading-message");
+    if (loadingMessage) {
+        loadingMessage.remove();
+    }
+}
 
-        function getBotResponse(query) {
-            fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${query}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.extract) {
-                    displayBotMessage(data.extract);
-                } else {
-                    displayBotMessage("I'm sorry, I couldn't find any information on that topic.");
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                displayBotMessage("Oops! Something went wrong. Please try again later.");
-            });
+// Object to manage predefined responses
+const predefinedResponses = {
+    "What is the capital of France?": "The capital of France is Paris."
+};
+
+async function getBotResponse(query) {
+    // Check if the query matches a predefined response
+    if (predefinedResponses[query]) {
+        displayBotMessage("Answer", predefinedResponses[query]);
+        removeLoadingMessage(); // Remove loading message when bot responds
+        return;
+    }
+
+    // First attempt to get information from Wikipedia
+    try {
+        let response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${query}`);
+        let data = await response.json();
+
+        if (data.extract) {
+            let imageUrl = data.thumbnail ? data.thumbnail.source : null;  // Check if image is available
+            displayBotMessage(data.title, data.extract, imageUrl);  // Pass Wikipedia title and extract
+        } else {
+            // If Wikipedia doesn't provide information, display custom fallback messages
+            displayFallbackMessage();
         }
-    </script>
+    } catch (error) {
+        console.error('Error fetching from Wikipedia:', error);
+        displayBotMessage("Error", "Oops! Something went wrong while fetching from Wikipedia.");
+    }
+}
+
+function displayFallbackMessage() {
+    const fallbackMessages = [
+        "It looks like there's no information available on this topic. Why not try another word?",
+        "I'm sorry, I couldn't find anything. How about searching for something else?",
+        "Hmmm, it seems this topic is tricky. Maybe try exploring a different topic?",
+        "No info found on that. Did you know the Eiffel Tower can be 15 cm taller in the summer due to heat expansion?"
+    ];
+
+    // Select a random fallback message from the array
+    let randomIndex = Math.floor(Math.random() * fallbackMessages.length);
+    displayBotMessage("Fallback", fallbackMessages[randomIndex]);
+}
+
+function displayBotMessage(title, message, imageUrl = null) {
+    var chatBox = document.getElementById("chat-box");
+    removeLoadingMessage(); // Remove loading message when bot responds
+
+    // Create container for bot response and logo (uy)
+    var uyContainer = document.createElement("div");
+    uyContainer.className = "uy";
+
+    // Create logo div and append robot image
+    var logoDiv = document.createElement("div");
+    logoDiv.className = "logo";
+    var botImage = document.createElement("img");
+    botImage.src = "";  // path to your robot image
+    botImage.className = "bot-logo";
+    logoDiv.appendChild(botImage);
+
+    // Create bot message div
+    var botMessageDiv = document.createElement("div");
+    botMessageDiv.className = "bot-message";
+
+    // Add heading for the Wikipedia title or answer
+    var topicHeading = document.createElement("h2");
+    topicHeading.textContent = title;
+    botMessageDiv.appendChild(topicHeading);
+
+    // Add bot message text
+    var botText = document.createElement("p");
+    botText.textContent = message;
+    botMessageDiv.appendChild(botText);
+
+    // If image URL is provided, append it to the bot message div
+    if (imageUrl) {
+        var botImg = document.createElement("img");
+        botImg.src = imageUrl;
+        botImg.className = "wiki-image";  // Use the new CSS class for styling
+        botMessageDiv.appendChild(botImg);
+    }
+
+    // Append logo and bot message into the container
+    uyContainer.appendChild(logoDiv);
+    uyContainer.appendChild(botMessageDiv);
+
+    // Append container to chatbox
+    chatBox.appendChild(uyContainer);
+}
+
+
+</script>
+
+    
+    <script src="https://kit.fontawesome.com/4748bef489.js" crossorigin="anonymous"></script>
 </body>
 </html>
-<style>h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose your preferred font family */
-    font-size:20px; /* Adjust font size as needed */
-    font-weight: bold; /* Adjust font weight as needed */
-    color: #333; /* Choose your preferred text color */
-    text-align: center; /* Align text to the center */
-    text-transform: uppercase; /* Convert text to uppercase */
-    letter-spacing: 2px; /* Adjust letter spacing as needed */
-    background-color:#0d5e62;
-    box-shadow: 5px 5px  5px black;
-    border-radius: 25px;
-    color:white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-left:20px ;
-    margin-right:20px ;
-    margin-top: 20px;
-    margin-bottom:0 ;
-    
-}
-.f{
-height:110px;
-background-color:black;
-text-align: center;
-color:white;
-padding-top:10px ;
-width: 100%; 
-}
-a{
-    margin: 10px;
-    text-decoration: none;
-    padding: 5px;
-    height: 25px;
-    width: 30px;
-    border-radius: 10px;
-    color: white;
-    transition: 0.2s;
-    
-
-}
-.lm:hover{
-    color: black;
-background:white;
-}
-.ins img{
-    width:40px;
-    height:40px;
-}
-.ins a{
-    font-size:10px;
-}
-.nt:hover{
-    background-color: white;
-    border-radius:50%;
-}
-.mp{
-    display: flex;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-}
-.text1{
-    color: white;
-    text-align: center;
-    background-color: #313234;
-    font-size: 10px;
-    padding: 10px;
-}
-.bou{
-    height: 30px;
-    background-color:#464646;
-}
-.mp img:hover{
-    box-shadow: 5px 5px  5px black;
-    border-radius: 50%;
-    margin:-1px;
-
-}
-  </style>
-
-
